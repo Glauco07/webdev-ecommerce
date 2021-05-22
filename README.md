@@ -18,3 +18,7 @@ https://miro.com/app/board/o9J_lDGk59Y=/
 # Requirements
 
 # Project Description
+Nosso projeto consiste no desenvolvimento do site de um site para um petshop ecommerce:
+- A página *home* representa a página inicial do site, com destaques de alguns produtos do site;
+- A página *rações* representa uma categoria de produtos, em que é possível visualizar produtos que se encaixem nesse grupo, com informações como **nome** e **preço**;
+- A página *login* é por onde o usuário realiza o **login** ou **cadastro** no site.
