@@ -1,0 +1,28 @@
+.container-footer{
+    background-color: gray;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-footer-social{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-footer-social-icon{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-footer-address{
+    font-size: 10px;
+}
+
+.container-footer-contact{
+    display: flex;
+    flex-direction: column;
+
+}

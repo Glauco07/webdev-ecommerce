@@ -1,0 +1,24 @@
+#header {
+    position: relative;
+    background-color: #b6f5d2;
+    padding: 1.5% 1% 4px 19%;
+    width: 100vw;
+}
+
+#searchbar {
+    padding-left: 20px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    width: 539px;
+    height: 45px;
+    font-size: 26px;
+}
+
+#upper-div {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    margin-right: 35px;
+}
