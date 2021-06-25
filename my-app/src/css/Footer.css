@@ -1,10 +1,10 @@
 .container-footer{
-    background-color: gray;
-    width: 100%;
+    padding: 10px;
+    background-color: #BFC5C2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .container-footer-social{
@@ -24,5 +24,52 @@
 .container-footer-contact{
     display: flex;
     flex-direction: column;
+}
 
+.container-footer-address-info {
+    font-size: 15px;
+    font-weight: 600;
+    color: #47525E;
+    text-align: center;
+    align-self: center;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.space-icons {
+    margin: 0px 7px 0px 7px;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #47525E;
+    font-size: 26px;
+}
+
+#telefone {
+    position: relative;
+    right: 20px;
+}
+
+#email {
+    position: relative;
+    right: 15px;
+}
+
+#follow {
+    margin-bottom: 15px;
+    color: #47525E;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+#contact {
+    font-size: 33px;
+    color: #47525E;
+    font-weight: 500;
 }
