@@ -1,8 +1,26 @@
-#header {
-    position: relative;
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.category {
+    margin-top: 10px;
+    font-weight: bold;
+    border: none;
     background-color: #b6f5d2;
-    padding: 1.5% 1% 4px 19%;
-    width: 100vw;
+    color: #47525E;
+    font-size: 17px;
+    line-height: 22px;
+    width: 156px;
+    height: 44px;
+    text-align: center;
+}
+
+#header {
+    position: fixed;
+    background-color: #b6f5d2;
+    padding: 1%;
+    width: 100%;
 }
 
 #searchbar {
@@ -12,13 +30,44 @@
     width: 539px;
     height: 45px;
     font-size: 26px;
+    border: none;
 }
 
 #upper-div {
     display: flex;
-    align-items: center;
 }
 
 #logo {
     margin-right: 35px;
+}
+
+#lupa {
+    position: relative;
+    right: 40px;
+    top: 2px;
+}
+
+#login {
+    position: relative;
+    right: 10px;
+    background-color: rgba(0, 242, 110, 0.48);
+    border-radius: 20px;
+    width: 164px;
+    height: 50px;
+    border: none;
+    font-size: medium;
+    font-weight: bold;
+    color: #47525E;
+    margin-right: 5px;
+}
+
+#login:active {
+    position: relative;
+    top: 1px;
+    box-shadow: 1px 1px grey;
+}
+
+#categories {
+    justify-content: center;
+    text-align: center;
 }
