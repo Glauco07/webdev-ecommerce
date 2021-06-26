@@ -10,7 +10,7 @@ import {
     Link
 } from "react-router-dom";
 
-import About from "../pages/About";
+import About from "./About";
 
 import "../css/Header.css"
 import logo from '../img/logo.png';

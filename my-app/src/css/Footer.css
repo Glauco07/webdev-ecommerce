@@ -1,4 +1,4 @@
-.container-footer{
+.container-footer {
     padding: 10px;
     background-color: #BFC5C2;
     display: flex;
@@ -7,21 +7,21 @@
     align-items: flex-start;
 }
 
-.container-footer-social{
+.container-footer-social {
     display: flex;
     flex-direction: column;
 }
 
-.container-footer-social-icon{
+.container-footer-social-icon {
     display: flex;
     flex-direction: row;
 }
 
-.container-footer-address{
+.container-footer-address {
     font-size: 10px;
 }
 
-.container-footer-contact{
+.container-footer-contact {
     display: flex;
     flex-direction: column;
 }

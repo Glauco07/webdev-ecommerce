@@ -10,11 +10,11 @@ import "../css/Footer.css";
 
 const Footer = () => {
     return(
-        <footer class='container-footer'>
+        <footer className="container-footer">
             <div className="container-footer-social">
                 <div id="follow">Nos siga nas redes Sociais</div>
 
-                <div class='container-footer-social-icon'>
+                <div className="container-footer-social-icon">
                     <img src={faceLogo} alt="face" width="53px" height="53px"></img>
                     <img src={instaLogo} alt="insta" width="51px" height="51px"></img>
                     <img className="space-icons" src={tiktokLogo} alt="tiktok" width="50px" height="50px"></img>
@@ -23,12 +23,12 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div class='container-footer-address-info'>
+            <div className="container-footer-address-info">
                 Rua das Amélias, Jardim Novo Oriente, 41-SP<br/>
                 11550-321
             </div>
 
-            <div class='container-footer-contact'>
+            <div className="container-footer-contact">
                 <div id="contact">Entre em contato</div>
 
                 <div className="footer-info">
