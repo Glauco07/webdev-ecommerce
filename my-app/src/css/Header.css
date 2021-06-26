@@ -16,8 +16,14 @@
     text-align: center;
 }
 
+.category:hover {
+    background-color: rgba(0, 242, 110, 0.48);
+    cursor: pointer;
+}
+
 #header {
-    position: fixed;
+    position: sticky;
+    top: 0px;
     background-color: #b6f5d2;
     padding: 1.7% 0px 1% 0px;
     width: 100%;

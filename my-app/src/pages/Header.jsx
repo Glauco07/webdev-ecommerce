@@ -48,31 +48,33 @@ const Header = () => {
         <div id="header">
             <div className="center">
                 <div id="upper-div" className="center">
-                <Router>
-                    <Link to="/">
-                        <img id="logo" src={logo} alt="logo" width="64px" style={{"display":"inline-block"}}></img>
-                    </Link>
-                </Router>
+                    <Router>
+                        <Link to="/">
+                            <img id="logo" src={logo} alt="logo" width="64px" style={{"display":"inline-block"}}></img>
+                        </Link>
+                    </Router>
+
                     <div id>
                         <input id="searchbar" type="text" placeholder="Pesquisar um produto" onChange={e => setProduct(e.target.value)}></input>
                         <img id="lupa" src={lupa} alt="lupa" width="23px"></img>
                     </div>
+
                     <button id="login">Fazer login</button>
                     <img src={cart} alt="cart" width="40px"></img>
-                </div>
- 
+
+                    </div>
+                        <div>
+                            <Router>
+                            <Navbar />
+                            <Switch>
+                                <Route path="/about">
+                                    <About />
+                                </Route>
+                            </Switch>
+                            </Router>
+                        </div>
+                    </div>
                 <div>
-                    <Router>
-                    <Navbar />
-                    <Switch>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                    </Switch>
-                    </Router>
-                </div>
-            </div>
-            <div>
             </div>
         </div>
     )
