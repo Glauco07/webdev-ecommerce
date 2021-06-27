@@ -2,14 +2,10 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    max-height: 236px;
 }
 
-#destaques-container-item {
-    width: 160px;
-    text-align: center;
-}
-
-#destaques-container-item:hover {
+.destaques-container-item:hover {
     cursor: pointer;
     background-color: rgb(203, 255, 225);
 }

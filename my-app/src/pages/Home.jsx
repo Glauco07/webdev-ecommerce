@@ -21,16 +21,12 @@ const Home = () => {
   ]
 
   return (
-    <div style={{"height": "100vh"}}>      
+    <section>      
       <h1 id="destaques">Destaques</h1>
-      <div id="destaques-container">
-        {destaques.map((product) => { 
-          return (
-            <Product text={product.text} price={product.price} image={product.image}/>
-          )}
-        )}
+      <div className="destaques-container">
+        {destaques.map((product) => <Product text={product.text} price={product.price} image={product.image}/>)}
       </div>
-    </div>
+    </section>
   )
 };
 

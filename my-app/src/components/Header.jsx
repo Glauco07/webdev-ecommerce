@@ -20,7 +20,7 @@ const Navbar = () => {
                 <button className="category">Alimentos</button>
             </Link>
 
-            <Link to="/about">
+            <Link to="/brinquedos">
                 <button className="category">Brinquedos</button>
             </Link>
 
@@ -30,6 +30,10 @@ const Navbar = () => {
 
             <Link to="/remedios">
                 <button className="category">Remédios</button>
+            </Link>
+
+            <Link to="/about">
+                <button className="category">Sobre Nós</button>
             </Link>
         </div>
     )
