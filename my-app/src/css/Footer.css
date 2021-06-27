@@ -5,9 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    position: fixed;
-    bottom: 0px;
-    width: calc(100% - 20px);
+    height: 139px;
 }
 
 .container-footer-social {

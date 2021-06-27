@@ -1,17 +1,21 @@
-.container-product{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+#destaques {
+  color: #47525E;
+  font-size: 35px;
+  line-height: 52px;
+  text-align: left;
+  padding-left: 80px
+}
+
+#destaques-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 #destaques-container-item {
     width: 160px;
+    margin-right:40px;
     text-align: center;
-}
-
-#destaques-container-item:hover {
-    cursor: pointer;
-    background-color: rgb(203, 255, 225);
 }
 
 .texto {

@@ -1,0 +1,119 @@
+.half-page {
+    width: 50%;
+    height: 100%;
+}
+
+#login-container {
+    display: flex;
+    height: calc(100% - 333px);
+    align-items: center;
+}
+
+#make-login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #47525E;
+    padding: 130px 40px 40px 40px;
+}
+
+#create-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.login-input {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(132, 146, 166, 0.48);
+    border-radius: 10px;
+    width: 495px;
+    height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 62px;
+}
+
+.create-account-input {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(132, 146, 166, 0.48);
+    border-radius: 10px;
+    width: 405px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+.login-button {
+    background-color: #FFFFFF;
+    border: 3px solid #4DDC8D;
+    border-radius: 10px;
+    width: 431px;
+    height: 81px;
+    color: #4DDC8D;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.login-button:hover {
+    cursor: pointer;
+    background-color: #4DDC8D;
+    color: white;
+}
+
+.login-text-title {
+    color: #47525E;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.create-account-title {
+    color: #47525E;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+    font-weight: 500;
+    text-align: center;
+}
+
+.login-password-text {
+    font-size: 24px;
+    color: #000000;
+    line-height: 31px;
+}
+
+.create-account-text {
+    font-size: 15px;
+    color: #000000;
+    line-height: 15px;
+}
+
+#division {
+    background-color: #99A79F;
+    width: 2px;
+    height: 75%;
+}
+
+#login-email-logo {
+    position: absolute;
+    left: 214px;
+    top: 319px;
+}
+
+#login-user {
+    background-image: url("../img/email-logo.png");
+    background-repeat: no-repeat;
+    background-size: 43px 43px;
+    background-position: 10px 21px;
+}
+
+#login-password {
+    background-image: url("../img/lock-icon.png");
+    background-repeat: no-repeat;
+    background-size: 43px 43px;
+    background-position: 10px 50px;
+}
