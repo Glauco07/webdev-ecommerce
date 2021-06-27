@@ -1,6 +1,7 @@
 #products-container {
     display: flex;
     justify-content: center;
+    min-height: calc(100% - 333px);
 }
 
 #products-container2 {
