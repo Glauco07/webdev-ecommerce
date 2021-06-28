@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
-
-import {loginUser} from "../store/reducers/userReducer"
-import { useDispatch, useSelector } from "react-redux";
+import { withRouter } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import {
     Link
@@ -41,38 +40,44 @@ const Navbar = () => {
 
 
 const Header = () => {
-    const [product, setProduct] = useState("");
+    const [searchTerm, setSearchTerm] = useState('')
     const user = useSelector(state => state.user);
+    const cartState = useSelector(state => state.cart)
+    const quantityProducts = cartState.products.reduce((total, current) =>  total + current.quantity, 0)
 
     return(
         <div id="header">
-            <div className="center">
-                <div id="upper-div" className="center">
-                    <Link to="/">
-                        <img id="logo" src={logo} alt="logo" width="64px" style={{"display":"inline-block"}}></img>
-                    </Link>
+            <div id="upper-div" className="center">
+                <Link to="/">
+                    <img id="logo" src={logo} alt="logo" width="64px" style={{"display":"inline-block"}}></img>
+                </Link>
 
-                    <div id>
-                        <input id="searchbar" type="text" placeholder="Pesquisar um produto" onChange={e => setProduct(e.target.value)}></input>
-                        <img id="lupa" src={lupa} alt="lupa" width="23px"></img>
-                    </div>
-                    {user.id === "" ? 
-                        <Link to="/login">
-                            <button id="login">Fazer login</button>
-                        </Link>
-                        :
-                        <Link to="/user">
-                            <p>{user.name}</p>
-                        </Link>
-                    }
-                    <Link to="/cart">
-                        <img src={cart} alt="cart" width="40px"></img>
-                    </Link>
+                <div>
+                    <input id="searchbar" type="text" value={searchTerm} placeholder="Pesquisar um produto" onKeyUp={(e)=>{if (e.keyCode === 13) {
+                        window.location.assign('/busca?searchTerm=' + searchTerm)
+                    }}} onChange={e => setSearchTerm(e.target.value)}></input>
+                    <img id="lupa" src={lupa} onClick={() =>{window.location.assign('/busca?searchTerm=' + searchTerm)}} alt="lupa" width="23px"></img>
                 </div>
+
+                {user.id === "" ? 
+                    <Link to="/login">
+                        <button id="login">Fazer login</button>
+                    </Link>
+                    :
+                    <Link to="/user">
+                        <p>{user.name}</p>
+                    </Link>
+                }
+
+                <Link to="/cart">
+                {quantityProducts === 0 ?  <div className="cart-quantity-div" style={{"visibility": "hidden"}}></div> : <div className="cart-quantity-div"><span className="cart-quantity">{quantityProducts}</span></div>}
+                    <img id="cart" src={cart} alt="cart" width="40px"></img>
+                </Link>
             </div>
+
             <Navbar />
         </div>
     )
 };
 
-export default Header;
+export default withRouter(Header);
