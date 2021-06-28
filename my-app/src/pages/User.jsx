@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -7,6 +7,8 @@ import { signoutUser } from "../store/reducers/userReducer";
 const User = () => {
   const user = useSelector(state => state.user);
   const dispatch = useDispatch()
+
+  const [showAddProduct, setShowAddProduct] = useState(false);
 
   return (
     <div>
@@ -17,6 +19,16 @@ const User = () => {
       <Link to="/">
         <button id="login" onClick={()=>{dispatch(signoutUser())}}>Sign Out</button>
       </Link>
+      { user.user === 'admin' ?
+      <div>
+        <button onClick={() => {setShowAddProduct(showAddProduct ? false : true)}}>Adicionar Produtos</button>
+        {showAddProduct ? 
+          <div>
+            <p>Produtos</p>
+          </div>
+      :   <></>}
+      </div> : <></>
+      }
     </div>
   )
 };
