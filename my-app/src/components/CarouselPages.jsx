@@ -22,9 +22,9 @@ const CarouselPages = ({ placeholder }) => {
             </section>
 
             <div className="slider-images">
-                <img src={placeholder ? bolas : cama} alt="bola" height="250px"></img>
-                <img src={placeholder ? bolas : pedigree} alt="pedigree" height="235px" width="145px"></img>
-                <img src={placeholder ? bolas : casa} alt="casa" height="277px"></img>
+                <img src={placeholder ? bolas : cama} alt={placeholder ? "bolas" : "cama"} width="28%"></img>
+                <img src={placeholder ? bolas : pedigree} alt={placeholder ? "bolas" : "pedigree"} width="16%"></img>
+                <img src={placeholder ? bolas : casa} alt={placeholder ? "bolas" : "casa"} width="28%"></img>
             </div>
         </div>
     )

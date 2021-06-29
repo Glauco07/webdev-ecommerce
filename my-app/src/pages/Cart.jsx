@@ -34,7 +34,7 @@ const Cart = () => {
                         </thead>
 
                         <tbody>
-                            {cart.products.map((product) => <CartItem text={product.text} price={product.price} quantity={product.quantity} id={product.id}/>)}
+                            {cart.products.map((product) => <CartItem text={product.text} price={product.price} quantity={product.quantity} id={product.id} key={product.id}/>)}
                         </tbody>
                     </table>
                 </div>

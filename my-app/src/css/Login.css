@@ -5,7 +5,7 @@
 
 #login-container {
     display: flex;
-    height: calc(100% - 333px);
+    min-height: calc(100% - 341px);
     align-items: center;
 }
 
@@ -96,7 +96,7 @@
 #division {
     background-color: #99A79F;
     width: 2px;
-    height: 75%;
+    height: 500px;
 }
 
 #login-email-logo {

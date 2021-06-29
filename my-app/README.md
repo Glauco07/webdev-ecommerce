@@ -1,12 +1,7 @@
 # TO DO:
 
-- Relatorio
-- Estilizar pagina de checkout
-- Add alert de compra sucedida
-- Subir os inputs de add produto para antes da lista na seçao de admin
+- Relatorio (testes: se colocar muitos produtos no carrinho, o número em cima do ícone sobrepassa o limite da div redondinha)
 - Adicionar lista de admins na parte de gerenciar admins
-- Estilar nome do usuario no header
-- Arrumar o carousel para resoluçoes menores
 
 
 # Getting Started with Create React App

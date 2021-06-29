@@ -62,12 +62,12 @@ const Header = () => {
                     </Link>
                     :
                     <Link to="/user">
-                        <p>{user.name}</p>
+                        <button id="login">{user.name}</button>
                     </Link>
                 }
 
                 <Link to="/cart">
-                {quantityProducts === 0 ?  <div className="cart-quantity-div" style={{"visibility": "hidden"}}></div> : <div className="cart-quantity-div"><span className="cart-quantity">{quantityProducts}</span></div>}
+                    {quantityProducts === 0 ? <div className="cart-quantity-div" style={{"visibility": "hidden"}}></div> : <div className="cart-quantity-div"><span className="cart-quantity">{quantityProducts}</span></div>}
                     <img id="cart" src={cart} alt="cart" width="40px"></img>
                 </Link>
             </div>

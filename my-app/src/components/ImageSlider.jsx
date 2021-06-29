@@ -17,6 +17,8 @@ const ImageSlider = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
+  setInterval(nextSlide, 7000)
+
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }

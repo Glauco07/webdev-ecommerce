@@ -1,0 +1,33 @@
+.checkout-page-title {
+    color: slategrey;
+}
+
+.checkout-page-text {
+    color: black;
+}
+
+.checkout-page-button {
+    background-color: #FFFFFF;
+    border: 3px solid #4DDC8D;
+    border-radius: 50px;
+    width: 280px;
+    height: 48px;
+    color: #4DDC8D;
+    font-size: 21px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.checkout-page-button:hover {
+    cursor: pointer;
+    background-color: #4DDC8D;
+    color: white;
+}
+
+.checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: calc(100% - 341px);
+}

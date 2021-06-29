@@ -21,6 +21,14 @@
     cursor: pointer;
 }
 
+.username {
+    margin: 20px;
+    text-decoration: underline;
+    color: skyblue;
+    background-color: white;
+    border-radius: 50%;
+}
+
 #header {
     position: sticky;
     top: 0px;
