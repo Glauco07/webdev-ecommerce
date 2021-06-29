@@ -13,7 +13,9 @@ const Product = ({text, price, image, id=''}) => {
         <div className="destaques-container-item">
           <img className="imagem" src={image} alt="Produto"></img>
           <span className="texto">{text}</span><br></br>
-          <span className="preco">R$ {Number(price).toFixed(2).toString().replace(".", ",")}</span>
+          <div style={{"display": "flex","justifyContent":"center"}}>
+            <span className="preco">R$ {Number(price).toFixed(2).toString().replace(".", ",")}</span>
+          </div>
         </div>
 
         <div className="buy-and-cart">

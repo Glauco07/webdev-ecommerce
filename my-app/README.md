@@ -1,15 +1,12 @@
 # TO DO:
 
-Paginas: Home, Produto, Login
-Componentes: Cart, Header
-CSS
-Redux: Ações, Reducers
-
-
-
-
-
-
+- Relatorio
+- Estilizar pagina de checkout
+- Add alert de compra sucedida
+- Subir os inputs de add produto para antes da lista na seçao de admin
+- Adicionar lista de admins na parte de gerenciar admins
+- Estilar nome do usuario no header
+- Arrumar o carousel para resoluçoes menores
 
 
 # Getting Started with Create React App

@@ -5,7 +5,7 @@
 
 #login-container {
     display: flex;
-    height: calc(100% - 341px);
+    height: calc(100% - 333px);
     align-items: center;
 }
 
@@ -14,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     color: #47525E;
-    padding: 130px 40px 40px 40px;
+    justify-content: center;
 }
 
 #create-account {
@@ -78,6 +78,7 @@
     text-align: left;
     font-weight: 500;
     text-align: center;
+    margin: 0px 0px 50px 0px;
 }
 
 .login-password-text {

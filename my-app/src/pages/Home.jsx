@@ -10,6 +10,9 @@ import medicamento from "../img/medicamento-cyclavance.png"
 import racao from "../img/racao-golden-duo.png"
 import bolas from "../img/bolas-pelucia.png"
 
+import ImageSlider from '../components/ImageSlider';
+
+
 const Home = () => {
   const destaques = [
     {text: "Shampoo Ibasa Anti Pulgas", price: 30.99, image: antipulgas, id: '6243563'},
@@ -21,12 +24,18 @@ const Home = () => {
   ]
 
   return (
-    <section className="destaques">      
-      <h1>Destaques</h1>
-      <div className="destaques-container">
-        {destaques.map((product) => <Product text={product.text} price={product.price} image={product.image} id={product.id} key={product.id}/>)}
-      </div>
-    </section>
+    <div id="home">
+      <section id="slider-section">
+        <ImageSlider/>
+      </section>
+
+      <section className="destaques">
+        <h1>Destaques</h1>
+        <div className="destaques-container">
+          {destaques.map((product) => <Product text={product.text} price={product.price} image={product.image} id={product.id} key={product.id}/>)}
+        </div>
+      </section>
+    </div>
   )
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "../css/Cart.css";
 import CartItem from "../components/CartItem"
 import sadcat from "../img/sadcat.png"
@@ -43,7 +44,9 @@ const Cart = () => {
                     <div className="checkout-number">
                         <span className="checkout-number">R$ {cart.totalPrice.toFixed(2).toString().replace(".", ",")}</span>
                     </div>
-                    <button className="checkout-button">Checkout</button>
+                    <Link to="/checkout">
+                        <button className="checkout-button">Checkout</button>
+                    </Link>
                 </div>
             </div>
             

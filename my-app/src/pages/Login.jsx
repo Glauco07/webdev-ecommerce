@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, { useState } from "react";
 import { useDispatch  } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { loginUser } from "../store/reducers/userReducer";
 import "../css/Login.css"
-import emailLogo from "../img/email-logo.png";
 
 const Login = () => {
     const [user, setUser] = useState("");
     const [pswd, setPswd] = useState("");
+    const [showCreateAcc, setShowCreateAcc] = useState(false);
 
     const dispatch = useDispatch();
 
@@ -38,48 +39,53 @@ const Login = () => {
                         onChange={(e) => setPswd(e.target.value)}
                     ></input><br></br>
                 </div>
-                
-                <button className="login-button" onClick={() => {dispatch(loginUser(user,pswd))}}>Fazer login</button>
+                <Link to="/user">
+                    <button className="login-button" onClick={() => {dispatch(loginUser(user,pswd))}}>Fazer login</button>
+                </Link>
             </div>
 
             <div id="division"></div>
 
             <div id="create-account" className="half-page">
-                <span className="login-text-title">Ainda não tem cadastro?</span>
-                <button className="login-button" onClick={() => {
-                    const rightSide = document.getElementById("create-account")
-                    rightSide.innerHTML = 
-                    `<div>
+                {showCreateAcc ? 
+                    <div style={{"display": "flex", "flexDirection": "column"}}>
                         <p class="create-account-title">Crie sua conta</p>
-                        <!--<span class="create-account-text">Usuário</span>-->
-                        <input 
+                        <input
+                            onChange={(e) => setUser(e.target.value)}
                             class="create-account-input"
                             type="text" 
                             placeholder="Nome de usuário"
-                        ></input><br></br>
-                        <!--<span class="create-account-text">E-Mail</span>-->
+                        ></input>
+                        <br></br>
                         <input
                             class="create-account-input"
                             type="text" 
                             placeholder="Endereço de e-mail"
-                        ></input><br></br>
-                        <!--<span class="create-account-text">Senha</span>-->
+                        ></input>
+                        <br></br>
                         <input 
+                            onChange={(e) => setPswd(e.target.value)}
                             class="create-account-input" 
                             type="password" 
-                            placeholder="Senha" 
-                        ></input><br></br>
-                        <!--<span class="create-account-text">Confirmar senha:</span>-->
+                            placeholder="Senha"
+                        ></input>
+                        <br></br>
                         <input 
                             class="create-account-input" 
                             type="password" 
                             placeholder="Confirme sua senha" 
-                        ></input><br></br>
-                        <button class="login-button">Crie sua conta</button>
-                    </div>`
-
-                    rightSide.style.justifyContent = "flex-start"
-                }}>Criar conta</button>
+                        ></input>
+                        <br></br>
+                        <Link to="/user">
+                            <button class="login-button" onClick={() => {dispatch(loginUser(user,pswd))}}>Crie sua conta</button>
+                        </Link>
+                    </div>
+                    :
+                    <>
+                        <span className="login-text-title">Ainda não tem cadastro?</span>
+                        <button className="login-button" onClick={() => {setShowCreateAcc(true)}}>Criar conta</button>
+                    </>
+                }
             </div>
         </div>
     )

@@ -27,6 +27,7 @@
     background-color: #b6f5d2;
     width: 100%;
     padding-top: 24px;
+    z-index: 10;
 }
 
 #searchbar {
