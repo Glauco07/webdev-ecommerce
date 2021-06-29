@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 import "../css/Slider.css"
 import CarouselPages from './CarouselPages';
@@ -17,7 +18,9 @@ const ImageSlider = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  setInterval(nextSlide, 7000)
+  useEffect(() => {
+    setTimeout(nextSlide, 7000)
+  }, [current]);
 
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
