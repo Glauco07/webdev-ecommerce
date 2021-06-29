@@ -1,0 +1,118 @@
+.sign-out {
+    background-color: #FFFFFF;
+    border: 3px solid #4DDC8D;
+    border-radius: 50px;
+    width: 220px;
+    height: 55px;
+    color: #4DDC8D;
+    font-size: 26px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.sign-out:hover {
+    cursor: pointer;
+    background-color: #4DDC8D;
+    color: white;
+}
+
+.user-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100% - 341px);
+    padding-left: 50px;
+}
+
+.user-page-container h1 {
+    color: slategray;
+    font-weight: 450;
+    right: 40px;
+}
+
+.user-page-title {
+    color: slategrey;
+}
+
+.user-page-text {
+    color:black;
+}
+
+.user-page-inner {
+    padding-left: 50px;
+}
+
+.user-admin {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.user-admin-button {
+    background-color: darkgray;
+    border: 3px solid black;
+    border-radius: 50px;
+    width: 170px;
+    height: 30px;
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.user-admin-button:hover {
+    cursor: pointer;
+    background-color: skyblue;
+    color: white;
+}
+
+.admin-remove-product {
+    background-color: #FFFFFF;
+    border: 3px solid #4DDC8D;
+    border-radius: 50px;
+    width: 170px;
+    height: 30px;
+    color: #4DDC8D;
+    font-size: 15px;
+    text-align: center;
+}
+
+.admin-remove-product:hover {
+    cursor: pointer;
+    background-color: #4DDC8D;
+    color: white;
+}
+
+.admin-products-title {
+    font-weight: 450;
+    font-size: 28px;
+}
+
+.admin-product-item {
+    width: 90%;
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.order-history-text {
+    font-style: bold;
+    color: black;
+    font-weight: 600;
+}
+
+.input-field-user {
+    width: 160px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.admin-products-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-page-product-name {
+    color: slategray;
+    text-align: left;
+    width: 200px;
+}

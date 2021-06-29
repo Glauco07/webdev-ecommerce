@@ -11,10 +11,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Product from "./pages/Product";
 import User from "./pages/User";
 import Admin from "./pages/Admin";
 import Cart from "./pages/Cart";
+import Checkout from "./pages/Checkout";
 import ListProducts from "./pages/ListProducts";
 
 
@@ -52,8 +52,8 @@ const App = () => {
           <Route path="/cart">
             <Cart />
           </Route>
-          <Route path="/product">
-            <Product />
+          <Route path="/checkout">
+            <Checkout />
           </Route>
           <Route path="/login">
             <Login />

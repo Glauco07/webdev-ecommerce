@@ -8,6 +8,7 @@
 }
 
 #products-container {
+    margin: 20px;
     display: flex;
     width: 1080px;
     flex-wrap: wrap;
