@@ -29,6 +29,9 @@ Nosso projeto consiste no desenvolvimento do site de um site para um petshop eco
 # Comments About the Code
  Nosso projeto foi feito utilizando os frameworks react e redux. Com isso, todas nossas páginas e funcionalidades são feitas em componentes e as informações são salvas na store.
  Para o roteamento das páginas, nós utilizamos o React Router.
+ No react, nós separamos os componentes em /pages e /components dependendo da funcionalidade dele
+ No redux criamos dois reducers. Um para o carrinho e outro para o usuario.
+
  
 # Test Plan
 Nossos testes foram realizados manualmente, realizando cada uma das funcionalidades
@@ -47,7 +50,7 @@ Todos os fluxos listados acima funcionaram corretamente.
 
 # Build Procedures
 Para rodar o nosso site, precisa ter npm instalado.
-Com isso, basta rodar npm install e npm start na pasta raiz do projeto.
+Com isso, basta rodar npm install e npm start na pasta my-app do projeto.
 
 # Problems
 Tivemos alguns problemas com as libs que encontramos de carousel e no fim decidimos montar uma nós mesmos.
