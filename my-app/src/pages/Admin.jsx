@@ -3,8 +3,6 @@ import React, {useState} from "react";
 const Admin = () => {
 
     const [showAddProduct, setShowAddProduct] = useState(false);
-    // add admind
-    // manage products
 
     return (
         <div>

@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState} from "react";
+import { connect } from "react-redux";
 import Product from "../components/Product";
 import balls from "../img/bolas-pelucia.png";
 
-import { mockedProducts } from '../mockedDatabase';
 import "../css/ListProducts.css"
 
-const ListProducts = ({title, desc, category=''}) => {
+const ListProducts = ({title, desc, category='', products}) => {
     const urlParams = new URLSearchParams(window.location.search);
     const searchTerm = urlParams.get('searchTerm');
 
@@ -15,17 +15,23 @@ const ListProducts = ({title, desc, category=''}) => {
                 <h2>{title}</h2>
                 <span>{desc}</span>
                 <div id="products-container">
-                    {mockedProducts.filter((product) => {
+                    {products.filter((product) => {
                         if (category !== '' ) return product.category === category ? product : undefined
                         else if (searchTerm !== '' && (product.category.toLowerCase().includes(searchTerm.toLowerCase()) || product.text.toLowerCase().includes(searchTerm.toLowerCase()))) {
                             return product
                         }
                         return undefined
-                    }).map((product) => <Product text={product.text} price={product.price} image={balls} id={product.id} key={product.id}/>)}
+                    }).map((product) => <Product text={product.text} price={product.price} image={balls} id={product._id} key={product._id}/>)}
                 </div>
             </section>
         </div>
     )
 }
 
-export default ListProducts;
+const mapStateToProps = (state) => {
+    return {
+        products: state.products.list,
+    }
+}
+
+export default connect(mapStateToProps, null)(ListProducts);

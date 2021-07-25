@@ -17,14 +17,13 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import ListProducts from "./pages/ListProducts";
 
-
 const App = () => {
   const alimentosDesc = "Os amantes de pets devem fazer o possível para garantir a saúde e qualidade de vida dos seus animais de estimação. Pensando nisso, oferecer uma ração rica em componentes nutritivos é imprescindível a fim de garantir todo o bem-estar e felicidade dos seus pets."
   const remediosDesc = "Mesmo com todos os cuidados que proporcionamos para os seus animais, pode acontecer de eles ficarem doentes ou terem a necessidade de suplementos. Nesse caso, só uma alimentação balanceada não é suficiente, sendo necessário recorrer a opções como os medicamentos mais adequados."
   const casinhasDesc = "É importante oferecermos um cantinho especial da casa para nossos animaizinhos. Assim, após um dia de divertidas brincadeiras e atividades, nossos pets podem descansar e repor suas energias. Para garantir um lugar tranquilo para o peludo, adquira uma ótima casinha."
   const brinquedosDesc = "Todos os pets precisam de uns brinquedinhos para se divertirem, com os seus donos ou mesmo sozinhos. Adquira os melhores brinquedos aqui."
 
-  return (
+    return (
     <Router>
       <Header />
       <Switch>

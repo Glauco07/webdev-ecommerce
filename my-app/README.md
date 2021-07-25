@@ -1,9 +1,3 @@
-# TO DO:
-
-- Relatorio (testes: se colocar muitos produtos no carrinho, o número em cima do ícone sobrepassa o limite da div redondinha)
-- Adicionar lista de admins na parte de gerenciar admins
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { useDispatch  } from "react-redux";
+import { connect  } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { loginUser } from "../store/reducers/userReducer";
+import { loginUser, addUser } from "../store/reducers/userReducer";
 import "../css/Login.css"
 
-const Login = () => {
+const Login = ({loginUser, addUser}) => {
     const [user, setUser] = useState("");
     const [pswd, setPswd] = useState("");
+    const [name, setName] = useState("");
+    const [city, setCity] = useState("");
+    const [email, setEmail] = useState("");
     const [showCreateAcc, setShowCreateAcc] = useState(false);
-
-    const dispatch = useDispatch();
 
     return (
         <div id="login-container">
@@ -40,7 +41,7 @@ const Login = () => {
                     ></input><br></br>
                 </div>
                 <Link to="/user">
-                    <button className="login-button" onClick={() => {dispatch(loginUser(user,pswd))}}>Fazer login</button>
+                    <button className="login-button" onClick={() => loginUser(user, pswd)}>Fazer login</button>
                 </Link>
             </div>
 
@@ -54,30 +55,39 @@ const Login = () => {
                             onChange={(e) => setUser(e.target.value)}
                             class="create-account-input"
                             type="text" 
-                            placeholder="Nome de usuário"
-                        ></input>
+                            placeholder="Usuário"
+                         required></input>
                         <br></br>
                         <input
+                            onChange={(e) => setName(e.target.value)}
+                            class="create-account-input"
+                            type="text" 
+                            placeholder="Nome Completo"
+                         required></input>
+                        <br></br>
+                        <input
+                        onChange={(e) => setEmail(e.target.value)}
                             class="create-account-input"
                             type="text" 
                             placeholder="Endereço de e-mail"
-                        ></input>
+                         required></input>
+                        <br></br>
+                        <input
+                        onChange={(e) => setCity(e.target.value)}
+                            class="create-account-input" 
+                            type="test" 
+                            placeholder="Cidade" 
+                         required></input>
                         <br></br>
                         <input 
                             onChange={(e) => setPswd(e.target.value)}
                             class="create-account-input" 
                             type="password" 
                             placeholder="Senha"
-                        ></input>
-                        <br></br>
-                        <input 
-                            class="create-account-input" 
-                            type="password" 
-                            placeholder="Confirme sua senha" 
-                        ></input>
+                         required></input>
                         <br></br>
                         <Link to="/user">
-                            <button class="login-button" onClick={() => {dispatch(loginUser(user,pswd))}}>Crie sua conta</button>
+                            <button class="login-button" onClick={()=>addUser(user, name, city, email, pswd)}>Crie sua conta</button>
                         </Link>
                     </div>
                     :
@@ -91,4 +101,10 @@ const Login = () => {
     )
 }
 
-export default Login;
+const mapStateToProps = (state) => {
+    return {
+        user: state.user,
+    }
+}
+
+export default connect(mapStateToProps, {loginUser, addUser})(Login);

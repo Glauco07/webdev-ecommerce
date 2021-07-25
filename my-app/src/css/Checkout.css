@@ -1,3 +1,7 @@
+p {
+    margin-bottom: 8px;
+}
+
 .checkout-page-title {
     color: slategrey;
 }
@@ -30,4 +34,38 @@
     align-items: center;
     justify-content: space-around;
     min-height: calc(100% - 341px);
+}
+
+.checkout-input {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(132, 146, 166, 0.48);
+    border-radius: 10px;
+    width: 280px;
+    height: 23px;
+    padding-left: 10px;
+}
+
+.checkout-select {
+    border-radius: 10px;
+    width: 280px;
+    height: 25px;
+    border: 1px solid rgba(132, 146, 166, 0.48);
+}
+
+.checkout-input-card {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(132, 146, 166, 0.48);
+    border-radius: 10px;
+    width: 280px;
+    height: 23px;
+    padding-left: 10px;
+}
+
+.checkout-input-cvv {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(132, 146, 166, 0.48);
+    border-radius: 10px;
+    width: 55px;
+    height: 23px;
+    padding-left: 10px;
 }

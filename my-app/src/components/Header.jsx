@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { withRouter } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 import "../css/Header.css"
 import logo from '../img/logo.png';
 import lupa from '../img/lupa.png';
 import cart from '../img/cart.png';
+
+import {retrieveProducts} from "../store/reducers/productsReducer";
 
 
 const Navbar = () => {
@@ -36,11 +38,15 @@ const Navbar = () => {
 }
 
 
-const Header = () => {
+const Header = ({retrieveProducts}) => {
     const [searchTerm, setSearchTerm] = useState('')
     const user = useSelector(state => state.user);
     const cartState = useSelector(state => state.cart)
     const quantityProducts = cartState.products.reduce((total, current) =>  total + current.quantity, 0)
+
+    useEffect(() => {
+        retrieveProducts()
+    }, [retrieveProducts]);
 
     return(
         <div id="header">
@@ -56,13 +62,13 @@ const Header = () => {
                     <img id="lupa" src={lupa} onClick={() =>{window.location.assign('/busca?searchTerm=' + searchTerm)}} alt="lupa" width="23px"></img>
                 </div>
 
-                {user.id === "" ? 
+                {user?._id === "" ? 
                     <Link to="/login">
                         <button id="login">Fazer login</button>
                     </Link>
                     :
                     <Link to="/user">
-                        <button id="login">{user.name}</button>
+                        <button id="login">{user?.name}</button>
                     </Link>
                 }
 
@@ -77,4 +83,4 @@ const Header = () => {
     )
 };
 
-export default withRouter(Header);
+export default connect(null,{retrieveProducts})(withRouter(Header));

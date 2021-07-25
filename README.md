@@ -10,13 +10,14 @@ Luca Faria Curcio - 10295502
 # Navigation Diagram
 https://miro.com/app/board/o9J_lDGk59Y=/
 
-# Protype
+# Prototype
 - Home: https://marvelapp.com/prototype/gcg5i07/screen/79495769
 - Products: https://marvelapp.com/prototype/gcg5i07/screen/79562591
 - Login: https://marvelapp.com/prototype/gcg5i07/screen/79563949
 
 # Requirements
 - npm
+- node
 
 # Project Description
 Nosso projeto consiste no desenvolvimento do site de um site para um petshop ecommerce:
@@ -47,10 +48,17 @@ Todos os fluxos listados acima funcionaram corretamente.
 - A navegaçao pelas páginas do site funcionam perfeitamente
 - O carrinho também esta funcionando, com o valor total sendo atualizado corretamente e o carrinho limpo depois de uma compra bem sucedida.
 
-
 # Build Procedures
-Para rodar o nosso site, precisa ter npm instalado.
-Com isso, basta rodar npm install e npm start na pasta my-app do projeto.
+Para rodar o nosso site, precisa rodar os seguintes comandos nas respectivas pastas:
+- my-server:
+  ```bash
+    node ./app.js
+  ```
+- my-app: 
+  ```bash
+    npm start
+  ```
+Para acessar o site, acesse [http://localhost:3000](http://localhost:3000)
 
 # Problems
 Tivemos alguns problemas com as libs que encontramos de carousel e no fim decidimos montar uma nós mesmos.

@@ -5,7 +5,7 @@ const initialState = {
 
 export const addProduct = (text, price, quantity, id) => {
   return {
-    type: "addProduct",
+    type: "addProductCart",
     payload: {
       text,
       price,
@@ -17,7 +17,7 @@ export const addProduct = (text, price, quantity, id) => {
 
 export const removeProduct = (id) => {
   return {
-    type: "removeProduct",
+    type: "removeProductCart",
     payload: {
       id,
     }
@@ -34,7 +34,7 @@ export const clearCart = () => {
 const cartReducer = (state = initialState, action) => {
   // The reducer normally looks at the action type field to decide what happens
   switch (action.type) {
-    case "addProduct": {
+    case "addProductCart": {
       const newItem = {
         text: action.payload.text,
         price: action.payload.price,
@@ -54,7 +54,7 @@ const cartReducer = (state = initialState, action) => {
         totalPrice: state.totalPrice + action.payload.price * action.payload.quantity,
       }
     }
-    case "removeProduct": {
+    case "removeProductCart": {
       let value = 0
       return {
         ...state,
@@ -75,7 +75,7 @@ const cartReducer = (state = initialState, action) => {
     }
     // Do something here based on the different types of actions
     default:
-      // If this reducer doesn"t recognize the action type, or doesn"t
+      // If this reducer doesnt recognize the action type, or doesnt
       // care about this specific action, return the existing state unchanged
       return state
   }

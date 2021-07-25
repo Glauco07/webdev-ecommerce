@@ -1,23 +1,76 @@
+import { http } from "../axios"
+
 const initialState = {
   name: "",
   user: "",
-  type: "",
-  id: "",
+  admin: false,
+  _id: "",
   city: "",
   email: "",
 };
 
-export const loginUser = (user, password) => {
-  return {
-    type: "loginUser",
-    payload: {
-      user,
-      name: "Pessoa Maravilhosa",
-      id: "651132135",
-      city: "São Carlos",
-      email: "userperfeito@gmail.com",
-      type: "premium"
+export const loginUser = (user, password) => async (dispatch) => {
+  try {
+    const res = await http.post("/login", {user: user, password: password});
+
+    if (res.data !== 'Login Failed') {
+      dispatch({
+        type: "loginUser",
+        payload: {
+          user,
+          name: res.data.name,
+          _id: res.data._id,
+          city: res.data.city,
+          email: res.data.email,
+          admin: res.data.admin
+        }
+      });
     }
+  } catch (e) {
+    console.error('Erro logging user: ', e)
+  }
+}
+
+export const addUser = (user, name, city, email, password) => async (dispatch) => {
+  try {
+    const res = await http.post("/users", {user, name, city, email, admin: false, password})
+
+    dispatch({
+      type: "loginUser",
+      payload: {
+        user,
+        name,
+        city,
+        email,
+        admin: false,
+        _id: res.data.insertedId
+      }
+    })
+  } catch (e) {
+    console.error("Error adding a new user: ", e)
+  }
+}
+
+export const addAdmin = (user) => async (dispatch) => {
+  try {
+    const res = await http.post("/users/addadmin", {user})
+    const username = JSON.parse(res.config.data).user
+
+    dispatch({
+      type: "addAdmin",
+      payload: {
+        user
+      }
+    })
+
+    if (res.status === 200) {
+      window.alert(`Usuário ${username} se tornou admin`)
+    } else {
+      window.alert("Usuário não existe")
+    }
+  } catch (e) {
+    window.alert("Falha ao adicionar admin")
+    console.error("Error adding a new admin: ", e)
   }
 }
 
