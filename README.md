@@ -32,21 +32,27 @@ Nosso projeto consiste no desenvolvimento do site de um site para um petshop eco
  Para o roteamento das páginas, nós utilizamos o React Router.
  No react, nós separamos os componentes em /pages e /components dependendo da funcionalidade dele
  No redux criamos dois reducers. Um para o carrinho e outro para o usuario.
-
  
 # Test Plan
 Nossos testes foram realizados manualmente, realizando cada uma das funcionalidades
-- Adicionar e remover produtos do carrinho
-- Fluxo de checkout funcionando e limpando o carrinho após uma compra
-- Login aceita qualquer usuario e senha e para cadastrar, quaisquer informaçoes sao aceitas também.
-- Para logar como admin, basta usar o user "admin" (Sem as aspas)
+- Adicionar e remover produtos do carrinho (de um em um, ou vários)
+- Fluxo de checkout funcionando e limpando o carrinho após uma compra (usuário precisa estar logado para poder comprar)
+- Para fazer login, é necessário já ter uma conta, caso contrário, não loga
+- É possível criar uma conta
+- Para logar como admin, basta usar o user e senha "admin" (sem as aspas)
+- Ao clicar nas setas no carrosel, ele muda a página em exibição
+- Todos os botões funcionam, e levam para as páginas de destino desejadas
+- Responsividade
 
 # Test Results
 Todos os fluxos listados acima funcionaram corretamente.
-- As informaçoes do perfil de usuario serão sempre as mesmas
-- As opçoes de admin (Gerenciar produtos e admins) por enquanto não conseguem mudar o banco de dados mockado.
+- As informaçoes do perfil vêm da API que consome do banco de dados
+- As opçoes de admin (Gerenciar produtos e admins) conseguem mudar o banco de dados
 - A navegaçao pelas páginas do site funcionam perfeitamente
-- O carrinho também esta funcionando, com o valor total sendo atualizado corretamente e o carrinho limpo depois de uma compra bem sucedida.
+- O site é responsivo para desktop
+- O carrinho também esta funcionando, com o valor total sendo atualizado corretamente e o carrinho limpo depois de uma compra bem sucedida
+- Quando uma compra é realizada, esta é adicionada ao histórico do usuário que a fez
+- Os admins possuem acesso ao histórico de todas as compras realizadas
 
 # Build Procedures
 Para rodar o nosso site, precisa rodar os seguintes comandos nas respectivas pastas:
